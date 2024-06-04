@@ -410,15 +410,12 @@ header {
   transition: var(--transition);
 }
 
-.projects__categories li:hover {
+.projects__categories li:hover, li.mixitup-control-active {
   background: var(--color-primary);
   color: var(--color-gray-100);
 }
 
-.projects__categories li.active {
-  background: var(--color-primary);
-  color: var(--color-gray-100);
-}
+
 
 .projects__container {
   display: grid;
@@ -567,4 +564,57 @@ section.contact {
 .contact__form input::placeholder,
 .contact__form textarea::placeholder {
   color: var(--color-gray-100);
+}
+
+/* ============ Footer ================= */
+
+footer {
+  background: hsl(var(--primary-hue), 5%, 5%);
+  padding-top: 7rem;
+}
+.footer__menu {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.footer__menu a {
+  color: hsl(var(--primary-hue), 5%, 70%);
+  transition: var(--transition);
+}
+.footer__menu a:hover {
+  color: #fff;
+}
+
+.footer__socials {
+  width: fit-content;
+  display: flex;
+  gap: 1.5rem;
+  margin: 3rem auto 4rem;
+}
+
+.footer__socials a {
+  background: #fff;
+  color: rgb(16, 1, 31);
+  padding: 0.6rem;
+  display: flex;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.footer__socials a:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.footer__socials a:hover {
+  opacity: 0.7;
+  transform: translateY(-0.5rem);
+}
+
+.footer__copyright {
+  color: hsl(var(--primary-hue), 5%, 70%);
+  text-align: center;
+  border-top: 2px solid hsl(var(--primary-hue), 5%, 25%);
+  padding: 1.5rem e;
 }
