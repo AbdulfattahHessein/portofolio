@@ -4,8 +4,6 @@ const servicesButtons = document.querySelectorAll(".service__item");
 
 const servicesRight = document.querySelector(".services__right");
 
-console.log(servicesButtons);
-
 const getService = (category) => {
   const details = servicesData.find((item) => item.category == category);
   servicesRight.innerHTML = `
@@ -57,4 +55,20 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-console.log(swiper);
+// =========== Nav Toggle (small screens)
+
+const navMenu = document.querySelector(".nav__menu");
+const navOpenBtn = document.querySelector(".nav__toggle-open");
+const navCloseBtn = document.querySelector(".nav__toggle-close");
+
+navOpenBtn.addEventListener("click", () => {
+  navMenu.style.display = "flex";
+  navCloseBtn.style.display = "inline-block";
+  navOpenBtn.style.display = "none";
+});
+
+navCloseBtn.addEventListener("click", () => {
+  navMenu.style.display = "none";
+  navCloseBtn.style.display = "none";
+  navOpenBtn.style.display = "inline-block";
+});
