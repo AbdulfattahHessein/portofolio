@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/logo.png" />
+    <title>Responsive Personal Portfolio</title>
+    <!-- IconsScout CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="home">
+    <!-- Start of Navbar -->
+    <nav>
+      <div class="container nav__container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/logo.png" alt="Navbar Logo" />
+        </a>
+        <ul class="nav__menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav__buttons">
+          <button class="nav__theme-btn"><i class="uil uil-moon"></i></button>
+          <button class="nav__toggle-open"><i class="uil uil-bars"></i></button>
+          <button class="nav__toggle-close">
+            <i class="uil uil-multiply"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Start of Header -->
+    <header>
+      <div class="container header__container">
+        <article class="header__image">
+          <img src="./assets/header.jpg" alt="" />
+        </article>
+        <article class="header__content">
+          <h4>Hi, I'm <span>Abdulfattah Hessein</span> , And I'll</h4>
+          <h1>
+            Get your business <br />
+            online the right way
+          </h1>
+          <p>
+            Are you looking for a professional developer to put your business
+            online? You've come to the right place! I've helped hundreds of
+            business owners bring their ideas to life. Hire me today!
+          </p>
+          <divc class="header__ctn">
+            <a href="#contact" class="btn btn-primary">Hire me</a>
+            <a href="#projects" class="btn">Projects</a>
+          </divc>
+        </article>
+        <ul class="header__socials">
+          <li>
+            <a href="https://twitter.com/" target="_blank"
+              ><i class="uil uil-twitter-alt"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/" target="_blank"
+              ><i class="uil-github-alt"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/" target="_blank"
+              ><i class="uil-linkedin-alt"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://dribbble.com/" target="_blank"
+              ><i class="uil-dribbble"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!------------------- End of Header ------------------->
+
+    <!-- ------------ Start of About------------- -->
+    <section class="about" id="about">
+      <div class="container about__container">
+        <div class="about__image">
+          <img src="./assets/about.jpg" alt="about image" />
+        </div>
+        <div class="about__details">
+          <h1>About Me</h1>
+          <div class="about__cards">
+            <div class="about__card">
+              <i class="uil-award-alt"></i>
+              <h4>Experience</h4>
+              <small>8+ years</small>
+            </div>
+            <div class="about__card">
+              <i class="uil-swatchbook"></i>
+              <h4>Projects</h4>
+              <small>220+ Completed</small>
+            </div>
+            <div class="about__card">
+              <i class="uil-users-alt"></i>
+              <h4>Clients</h4>
+              <small>100+ clients worldwide</small>
+            </div>
+          </div>
+          <p>
+            Building projects my clients love have always been my passion. Being
+            in the web development industry for over 3 years and serving more
+            than 70 happy clients worldwide, I'm always motivated o do more!
+          </p>
+          <p>
+            Hi, my name is John Dramani from Accra, Ghana. I'm a full-stack web
+            developer with a Bachelors degree in Computer Science. My top
+            priority is to get your business online the right way, giving you
+            industry-standard design and all the functionality you need to
+            operate smoothly online. Get in touch today with the details of your
+            project let's get started! Check out my resume below!
+          </p>
+
+          <a
+            href="./assets/resume.pdf"
+            class="btn btn-primary"
+            download="resume"
+            target="_blank"
+            ><i class="uil-file-download-alt"></i> Download CV</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- ------------ End of About------------- -->
+
+    <!-- -------------- Start of Services ------->
+
+    <section class="services" id="services">
+      <h1>Services</h1>
+      <p>
+        Abeatae cunn dolores molestias culpa odio illo uasi elit dipisicing*
+      </p>
+      <div class="container services__container">
+        <ul class="services__left">
+          <li class="service__item frontend active" id="frontend">
+            <span><i class="uil-desktop"></i></span>
+            <div>
+              <h3>Frontend</h3>
+              <p>14 Projects</p>
+            </div>
+          </li>
+          <li class="service__item backend" id="backend">
+            <span><i class="uil-server"></i></span>
+            <div>
+              <h3>Backend</h3>
+              <p>11 Projects</p>
+            </div>
+          </li>
+          <li class="service__item fullstack" id="fullstack">
+            <span><i class="uil-apps"></i></span>
+            <div>
+              <h3>Fullstack</h3>
+              <p>28 Projects</p>
+            </div>
+          </li>
+        </ul>
+        <article class="services__right">
+          <!-- <h3>Frontend Development</h3>
+          <p>
+             Frontend ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            quaerat officia maxime ullam. Distinctio voluptate officia voluptas
+            unde debitis quia corporis doloribus labore vero? Soluta dolorum
+            sapiente dolores libero accusantium 
+          </p>
+          <p>
+            Consectetur adipisicing elit
+            Autem tempora vitae magni Sint hic non consectetur voluptatum
+            accusamus, est dicta commodi, possimus laborum nam deserunt
+            blanditiis ratione sit iste in, quisquam corporis quod voluptates
+            voluptas natus. Optio doloremque, at nisi voluptas sapiente quidem
+            expedita mollitia itaque tempora vero deleniti error, quod ipsam
+            officiis dicta facere culpa reprehenderit provident animi.
+            Architecto?
+          </p>
+          <p>Dolor sit amet consectetur adipisicing elit. ld
+            voluptatum suscipit voluptatibus ex illo porro similique, dicta
+            dignissimos facilis? 1110.</p>
+          </p> -->
+        </article>
+      </div>
+    </section>
+    <!-- -------------- End of Services ------->
+
+    <!-- -------------- Start of Projects ------->
+    <section class="projects" id="projects">
+      <h1>Recent Projects</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eum
+        sapiente at consequatur nulla.
+      </p>
+      <ul class="projects__categories">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter=".frontend">Frontend</li>
+        <li data-filter=".backend">Backend</li>
+        <li data-filter=".fullstack">Fullstack</li>
+      </ul>
+
+      <div class="container projects__container">
+        <article class="project mix fullstack" data-order="1">
+          <div class="project__image">
+            <img src="./assets/project1.jpg" alt="Project One" />
+          </div>
+          <h3>Project One Title (Fullstack)</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
+            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
+            aperiam officia enim doloremque fugiat ab, assumenda et hic!
+            Similique, eaque?
+          </p>
+          <div class="project__cta">
+            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
+            <a href="" class="btn btn-sm" target="_blank">Github</a>
+          </div>
+        </article>
+        <article class="project mix fullstack" data-order="2">
+          <div class="project__image">
+            <img src="./assets/project2.jpg" alt="Project Two" />
+          </div>
+          <h3>Project Two Title (Fullstack)</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
+            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
+            aperiam officia enim doloremque fugiat ab, assumenda et hic!
+            Similique, eaque?
+          </p>
+          <div class="project__cta">
+            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
+            <a href="" class="btn btn-sm" target="_blank">Github</a>
+          </div>
+        </article>
+        <article class="project mix frontend" data-order="3">
+          <div class="project__image">
+            <img src="./assets/project3.jpg" alt="Project Three" />
+          </div>
+          <h3>Project Three Title (Frontend)</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
+            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
+            aperiam officia enim doloremque fugiat ab, assumenda et hic!
+            Similique, eaque?
+          </p>
+          <div class="project__cta">
+            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
+            <a href="" class="btn btn-sm" target="_blank">Github</a>
+          </div>
+        </article>
+        <article class="project mix fullstack" data-order="4">
+          <div class="project__image">
+            <img src="./assets/project4.jpg" alt="Project Four" />
+          </div>
+          <h3>Project Four Title (Fullstack)</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
+            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
+            aperiam officia enim doloremque fugiat ab, assumenda et hic!
+            Similique, eaque?
+          </p>
+          <div class="project__cta">
+            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
+            <a href="" class="btn btn-sm" target="_blank">Github</a>
+          </div>
+        </article>
+        <article class="project mix backend" data-order="5">
+          <div class="project__image">
+            <img src="./assets/project5.jpg" alt="Project Five" />
+          </div>
+          <h3>Project Five Title (Backend)</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
+            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
+            aperiam officia enim doloremque fugiat ab, assumenda et hic!
+            Similique, eaque?
+          </p>
+          <div class="project__cta">
+            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
+            <a href="" class="btn btn-sm" target="_blank">Github</a>
+          </div>
+        </article>
+        <article class="project mix backend" data-order="6">
+          <div class="project__image">
+            <img src="./assets/project6.jpg" alt="Project Six" />
+          </div>
+          <h3>Project Six Title (Backend)</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
+            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
+            aperiam officia enim doloremque fugiat ab, assumenda et hic!
+            Similique, eaque?
+          </p>
+          <div class="project__cta">
+            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
+            <a href="" class="btn btn-sm" target="_blank">Github</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- -------------- Start of Projects ------->
+
+    <!-- -------------- Start of Swiper ------->
+
+    <section class="swiper">
+      <h1>What's my clients say</h1>
+      <p>This is my clients say about me and my work.</p>
+      <div class="swiper-wrapper">
+        <figure class="swiper-slide">
+          <figcaption>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
+            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
+            ullam ab odio maxime incidunt impedit
+          </figcaption>
+          <div class="swiper__client">
+            <div class="swiper__client-avatar">
+              <img src="./assets/avatar1.jpg" alt="Client one" />
+            </div>
+            <div class="swiper__client-details">
+              <h5>Name of clinet</h5>
+              <small>Jop</small>
+            </div>
+          </div>
+        </figure>
+        <figure class="swiper-slide">
+          <figcaption>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
+            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
+            ullam ab odio maxime incidunt impedit
+          </figcaption>
+          <div class="swiper__client">
+            <div class="swiper__client-avatar">
+              <img src="./assets/avatar2.jpg" alt="Client one" />
+            </div>
+            <div class="swiper__client-details">
+              <h5>Name of clinet</h5>
+              <small>Jop</small>
+            </div>
+          </div>
+        </figure>
+        <figure class="swiper-slide">
+          <figcaption>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
+            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
+            ullam ab odio maxime incidunt impedit
+          </figcaption>
+          <div class="swiper__client">
+            <div class="swiper__client-avatar">
+              <img src="./assets/avatar3.jpg" alt="Client one" />
+            </div>
+            <div class="swiper__client-details">
+              <h5>Name of clinet</h5>
+              <small>Jop</small>
+            </div>
+          </div>
+        </figure>
+        <figure class="swiper-slide">
+          <figcaption>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
+            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
+            ullam ab odio maxime incidunt impedit
+          </figcaption>
+          <div class="swiper__client">
+            <div class="swiper__client-avatar">
+              <img src="./assets/avatar4.jpg" alt="Client one" />
+            </div>
+            <div class="swiper__client-details">
+              <h5>Name of clinet</h5>
+              <small>Jop</small>
+            </div>
+          </div>
+        </figure>
+        <figure class="swiper-slide">
+          <figcaption>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
+            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
+            ullam ab odio maxime incidunt impedit
+          </figcaption>
+          <div class="swiper__client">
+            <div class="swiper__client-avatar">
+              <img src="./assets/avatar5.jpg" alt="Client one" />
+            </div>
+            <div class="swiper__client-details">
+              <h5>Name of clinet</h5>
+              <small>Jop</small>
+            </div>
+          </div>
+        </figure>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- -------------- End of Swiper ------->
+
+    <!-- -------------- Start of Contact ------->
+
+    <section class="contact" id="contact">
+      <div class="container contact__container">
+        <ul class="contact__list">
+          <li>
+            <a
+              href="mailto:abdulfattah.hessein@gmail.com"
+              class="contact__list-item"
+              target="_blank"
+              ><i class="uil-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.messenger.com/t/AbdulfattahHessein"
+              class="contact__list-item"
+              target="_blank"
+              ><i class="uil-facebook-messenger-alt"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://wa.me/+201153878729"
+              class="contact__list-item"
+              target="_blank"
+              ><i class="uil-whatsapp"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="tel:+201153878729"
+              class="contact__list-item"
+              target="_blank"
+              ><i class="uil-phone"></i
+            ></a>
+          </li>
+        </ul>
+        <form action="" class="contact__form">
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email Address" />
+          <textarea rows="7" placeholder="Message"></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./mix/dist/mixitup.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
