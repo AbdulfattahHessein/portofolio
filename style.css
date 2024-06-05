@@ -213,6 +213,7 @@ nav {
 .nav__toggle-open {
   display: none;
   cursor: pointer;
+  color: var(--color-gray-900);
 }
 
 .nav__theme-btn {
@@ -604,7 +605,7 @@ section.contact {
 
 footer {
   background: hsl(var(--primary-hue), 5%, 5%);
-  padding-top: 7rem;
+  padding-top: 2rem;
 }
 .footer__menu {
   display: flex;
@@ -624,7 +625,7 @@ footer {
   width: fit-content;
   display: flex;
   gap: 1.5rem;
-  margin: 3rem auto 4rem;
+  margin: 2rem auto 2rem;
 }
 
 .footer__socials a {
