@@ -116,3 +116,33 @@ window.addEventListener("load", () => {
 //   const offset = Math.abs(icon.offsetWidth - icon.offsetHeight);
 //   icon.style.paddingInline = offset / 2 + "px";
 // });
+
+// ================= change theme color =================
+const colors = [222, 280, 138, 185, 358];
+
+var root = document.querySelector(":root");
+
+const themeColorBtn = document.getElementById("theme-color-btn");
+
+let currentThemeColor = +localStorage.getItem("theme-color-btn");
+
+if (!currentThemeColor) {
+  currentThemeColor = 0;
+  localStorage.setItem("theme-color-btn", 0);
+}
+
+root.style.setProperty("--primary-hue", colors[currentThemeColor]);
+
+let nextThemeColor = (currentThemeColor + 1) % colors.length;
+
+themeColorBtn.style.color = `hsl(${colors[nextThemeColor]}, 87%, 44%)`;
+
+themeColorBtn.addEventListener("click", () => {
+  root.style.setProperty("--primary-hue", colors[nextThemeColor]);
+
+  localStorage.setItem("theme-color-btn", nextThemeColor);
+
+  nextThemeColor = (nextThemeColor + 1) % colors.length;
+
+  themeColorBtn.style.color = `hsl(${colors[nextThemeColor]}, 87%, 44%)`;
+});
