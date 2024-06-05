@@ -6,15 +6,21 @@
     <link rel="icon" href="/assets/logo.png" />
     <title>Responsive Personal Portfolio</title>
     <!-- IconsScout CDN -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
     />
     <!-- Swiper JS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- Animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -46,10 +52,10 @@
     <!-- Start of Header -->
     <header>
       <div class="container header__container">
-        <article class="header__image">
+        <article class="header__image" data-aos="fade-up" data-aos-delay="500">
           <img src="./assets/header.jpg" alt="" />
         </article>
-        <article class="header__content">
+        <article class="header__content" data-aos="fade-in">
           <h4>Hi, I'm <span>Abdulfattah Hessein</span> , And I'll</h4>
           <h1>
             Get your business <br />
@@ -73,17 +79,17 @@
           </li>
           <li>
             <a href="https://github.com/" target="_blank"
-              ><i class="uil-github-alt"></i
+              ><i class="uil uil-github-alt"></i
             ></a>
           </li>
           <li>
             <a href="https://linkedin.com/" target="_blank"
-              ><i class="uil-linkedin-alt"></i
+              ><i class="uil uil-linkedin-alt"></i
             ></a>
           </li>
           <li>
             <a href="https://dribbble.com/" target="_blank"
-              ><i class="uil-dribbble"></i
+              ><i class="uil uil-dribbble"></i
             ></a>
           </li>
         </ul>
@@ -97,21 +103,21 @@
         <div class="about__image">
           <img src="./assets/about.jpg" alt="about image" />
         </div>
-        <div class="about__details">
+        <div class="about__details" data-aos="fade-in" data-aos-delay="300">
           <h1>About Me</h1>
           <div class="about__cards">
             <div class="about__card">
-              <i class="uil-award-alt"></i>
+              <i class="uil uil-award-alt"></i>
               <h4>Experience</h4>
               <small>8+ years</small>
             </div>
             <div class="about__card">
-              <i class="uil-swatchbook"></i>
+              <i class="uil uil-swatchbook"></i>
               <h4>Projects</h4>
               <small>220+ Completed</small>
             </div>
             <div class="about__card">
-              <i class="uil-users-alt"></i>
+              <i class="uil uil-users-alt"></i>
               <h4>Clients</h4>
               <small>100+ clients worldwide</small>
             </div>
@@ -135,7 +141,7 @@
             class="btn btn-primary"
             download="resume"
             target="_blank"
-            ><i class="uil-file-download-alt"></i> Download CV</a
+            ><i class="uil uil-file-download-alt"></i> Download CV</a
           >
         </div>
       </div>
@@ -152,28 +158,32 @@
       <div class="container services__container">
         <ul class="services__left">
           <li class="service__item frontend active" id="frontend">
-            <span><i class="uil-desktop"></i></span>
+            <span><i class="uil uil-desktop"></i></span>
             <div>
               <h3>Frontend</h3>
               <p>14 Projects</p>
             </div>
           </li>
           <li class="service__item backend" id="backend">
-            <span><i class="uil-server"></i></span>
+            <span><i class="uil uil-server"></i></span>
             <div>
               <h3>Backend</h3>
               <p>11 Projects</p>
             </div>
           </li>
           <li class="service__item fullstack" id="fullstack">
-            <span><i class="uil-apps"></i></span>
+            <span><i class="uil uil-apps"></i></span>
             <div>
               <h3>Fullstack</h3>
               <p>28 Projects</p>
             </div>
           </li>
         </ul>
-        <article class="services__right">
+        <article
+          class="services__right"
+          data-aos="fade-in"
+          data-aos-delay="200"
+        >
           <!-- <h3>Frontend Development</h3>
           <p>
              Frontend ipsum dolor sit amet consectetur adipisicing elit. Beatae
@@ -214,7 +224,7 @@
         <li data-filter=".fullstack">Fullstack</li>
       </ul>
 
-      <div class="container projects__container">
+      <div class="container projects__container" data-aos="fade-in">
         <article class="project mix fullstack" data-order="1">
           <div class="project__image">
             <img src="./assets/project1.jpg" alt="Project One" />
@@ -413,36 +423,36 @@
     <section class="contact" id="contact">
       <div class="container contact__container">
         <ul class="contact__list">
-          <li>
+          <li data-aos="fade-in" data-aos-delay="150">
             <a
               href="mailto:abdulfattah.hessein@gmail.com"
               class="contact__list-item"
               target="_blank"
-              ><i class="uil-envelope"></i
+              ><i class="uil uil-envelope"></i
             ></a>
           </li>
-          <li>
+          <li data-aos="fade-in" data-aos-delay="300">
             <a
               href="https://www.messenger.com/t/AbdulfattahHessein"
               class="contact__list-item"
               target="_blank"
-              ><i class="uil-facebook-messenger-alt"></i
+              ><i class="uil uil-facebook-messenger-alt"></i
             ></a>
           </li>
-          <li>
+          <li data-aos="fade-in" data-aos-delay="450">
             <a
               href="https://wa.me/+201153878729"
               class="contact__list-item"
               target="_blank"
-              ><i class="uil-whatsapp"></i
+              ><i class="uil uil-whatsapp"></i
             ></a>
           </li>
-          <li>
+          <li data-aos="fade-in" data-aos-delay="600">
             <a
               href="tel:+201153878729"
               class="contact__list-item"
               target="_blank"
-              ><i class="uil-phone"></i
+              ><i class="uil uil-phone"></i
             ></a>
           </li>
         </ul>
@@ -450,6 +460,8 @@
           action="https://formsubmit.co/abdulfattah.heesein@email.com"
           method="POST"
           class="contact__form"
+          data-aos="fade-up"
+          data-aos-delay="300"
         >
           <input type="text" name="Name" placeholder="Full Name" />
           <input type="email" name="Email" placeholder="Email Address" />
@@ -476,17 +488,17 @@
           </li>
           <li>
             <a href="https://github.com/" target="_blank"
-              ><i class="uil-github-alt"></i
+              ><i class="uil uil-github-alt"></i
             ></a>
           </li>
           <li>
             <a href="https://linkedin.com/" target="_blank"
-              ><i class="uil-linkedin-alt"></i
+              ><i class="uil uil-linkedin-alt"></i
             ></a>
           </li>
           <li>
             <a href="https://dribbble.com/" target="_blank"
-              ><i class="uil-dribbble"></i
+              ><i class="uil uil-dribbble"></i
             ></a>
           </li>
         </ul>
@@ -495,8 +507,13 @@
         <small>2024 &copy; All Rights Reserved.</small>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./mix/dist/mixitup.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1500, offset: 80 });
+    </script>
     <script src="./data.js"></script>
     <script src="./main.js"></script>
   </body>

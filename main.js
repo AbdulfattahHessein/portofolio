@@ -83,3 +83,36 @@ if (window.innerWidth < 767.98) {
     item.addEventListener("click", closeNavHandler);
   });
 }
+
+// toggle theme button
+
+const themeBtn = document.querySelector(".nav__theme-btn");
+const toggleThemeHandler = () => {
+  const isDark = document.body.classList.toggle("dark");
+  if (isDark) {
+    themeBtn.innerHTML = themeBtn.innerHTML.replace("moon", "sun");
+    localStorage.setItem("theme-mood", "dark");
+  } else {
+    themeBtn.innerHTML = themeBtn.innerHTML.replace("sun", "moon");
+    localStorage.setItem("theme-mood", "");
+  }
+  // save current theme settings
+  localStorage.setItem("theme-icon", themeBtn.innerHTML);
+};
+themeBtn.addEventListener("click", toggleThemeHandler);
+
+window.addEventListener("load", () => {
+  const themeMood = localStorage.getItem("theme-mood");
+  const themeIcon = localStorage.getItem("theme-icon");
+
+  document.body.classList = [themeMood];
+
+  themeBtn.innerHTML = themeIcon;
+});
+
+// const icons = document.querySelectorAll("i");
+
+// icons.forEach((icon) => {
+//   const offset = Math.abs(icon.offsetWidth - icon.offsetHeight);
+//   icon.style.paddingInline = offset / 2 + "px";
+// });
