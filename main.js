@@ -67,8 +67,19 @@ navOpenBtn.addEventListener("click", () => {
   navOpenBtn.style.display = "none";
 });
 
-navCloseBtn.addEventListener("click", () => {
+const closeNavHandler = () => {
   navMenu.style.display = "none";
   navCloseBtn.style.display = "none";
   navOpenBtn.style.display = "inline-block";
-});
+};
+
+navCloseBtn.addEventListener("click", closeNavHandler);
+
+// close nav menu on click of nav link on small screens
+
+const navItems = navMenu.querySelectorAll("a");
+if (window.innerWidth < 767.98) {
+  navItems.forEach((item) => {
+    item.addEventListener("click", closeNavHandler);
+  });
+}
