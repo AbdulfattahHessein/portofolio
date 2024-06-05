@@ -107,7 +107,7 @@ window.addEventListener("load", () => {
 
   document.body.classList = [themeMood];
 
-  themeBtn.innerHTML = themeIcon;
+  if (themeIcon) themeBtn.innerHTML = themeIcon;
 });
 
 // const icons = document.querySelectorAll("i");
