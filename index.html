@@ -1,517 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/logo.png" />
-    <title>Responsive Personal Portfolio</title>
-    <!-- IconsScout CDN -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    /> -->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
-    />
-    <!-- Swiper JS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- Animate on scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abdulfattah Hessein | Full-stack .NET + Angular Developer</title>
+<meta name="description" content="Full-stack developer working with ASP.NET Core and Angular. Open to remote roles.">
+<style>
+:root{--bg:#0f1420;--card:#171e2e;--line:#27304a;--text:#e8ecf6;--mute:#9aa6c2;--acc:#6ea8ff;--acc2:#8ee3c0}
+@media (prefers-color-scheme:light){:root{--bg:#f6f7fb;--card:#fff;--line:#dde2ee;--text:#151a29;--mute:#5a6483;--acc:#2559d6;--acc2:#0f8a63}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text)}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+header.nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+.nav .wrap{gap:10px;display:flex;justify-content:space-between;align-items:center;height:56px}
+.nav nav a{margin-left:14px;color:var(--mute);font-size:15px}
+.hero{padding:84px 22px 56px}
+.hero small{color:var(--acc2);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,6vw,56px);line-height:1.1;margin:10px 0 16px}
+.hero p{max-width:640px;color:var(--mute);font-size:18px}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:10px 18px;border-radius:10px;border:1px solid var(--line);color:var(--text);font-weight:600}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}
+section{padding:46px 0;border-top:1px solid var(--line)}
+h2{font-size:26px;margin:0 0 22px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 6px;font-size:20px}
+.card p{color:var(--mute);margin:8px 0}
+.card ul{margin:10px 0;padding-left:18px;color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tags span{font-size:13px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mute)}
+.links{margin-top:14px;display:flex;gap:16px;flex-wrap:wrap;font-weight:600}
+.skills{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.skills h3{margin:0 0 8px;font-size:15px;color:var(--acc2);text-transform:uppercase;letter-spacing:.06em}
+.skills li{color:var(--mute)}.skills ul{margin:0;padding-left:18px}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+@media(max-width:480px){.nav strong{display:none}.nav .wrap{justify-content:center}}
+.proj{grid-template-columns:1fr}.proj .card{display:grid;gap:22px;grid-template-columns:1fr}.proj .card img{margin:0!important;align-self:start}@media(min-width:760px){.proj .card{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><strong>Abdulfattah Hessein</strong>
+<nav><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<div class="wrap hero">
+<small>Full-stack developer · .NET + Angular</small>
+<h1>I build web apps with ASP.NET Core and Angular.</h1>
+<p>Based in Egypt and open to remote roles. I work across the stack: APIs, databases, and Angular front ends. I also teach as a teaching assistant at the Faculty of Computers and Information, Qena.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="https://github.com/AbdulfattahHessein">GitHub</a><a class="btn" href="mailto:abdulfattah.hessein@gmail.com">Email me</a></div>
+</div>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body id="home">
-    <!-- Start of Navbar -->
-    <nav>
-      <div class="container nav__container">
-        <a href="index.html" class="nav__logo">
-          <img src="assets/logo.png" alt="Navbar Logo" />
-        </a>
-        <ul class="nav__menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav__buttons">
-          <button class="nav__theme-btn"><i class="uil uil-moon"></i></button>
-          <button class="nav__theme-btn" id="theme-color-btn">
-            <i class="uil uil-swatchbook"></i>
-          </button>
-          <button class="nav__toggle-open"><i class="uil uil-bars"></i></button>
-          <button class="nav__toggle-close">
-            <i class="uil uil-multiply"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
-    <!-- End of Navbar -->
+<section id="projects"><div class="wrap">
+<h2>Selected projects</h2>
+<div class="grid proj">
+<article class="card"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgMjUwIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjI1MCIgZm9udC1mYW1pbHk9IkludGVyLFNlZ29lIFVJLEFyaWFsLHNhbnMtc2VyaWYiPjxkZWZzPjxtYXJrZXIgaWQ9ImEiIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwTDEwIDVMMCAxMHoiIGZpbGw9IiM2Yjc3OTQiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjcyMCIgaGVpZ2h0PSIyNTAiIHJ4PSIxNCIgZmlsbD0iI2ZhZmJmZiIvPjx0ZXh0IHg9IjIwIiB5PSIzMCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzI1NTlkNiI+U2FyaG5lOiBzdHJ1Y3R1cmUgcmVhZCBmcm9tIHRoZSBzb3VyY2UgY29kZTwvdGV4dD48cmVjdCB4PSIyMCIgeT0iNjAiIHdpZHRoPSIxNzAiIGhlaWdodD0iODAiIHJ4PSIxMCIgZmlsbD0iI2U4ZjBmZiIgc3Ryb2tlPSIjN2FhMmVlIi8+PHRleHQgeD0iMTA1LjAiIHk9Ijk2LjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxODIwM2EiPkFuZ3VsYXIgMjEgY2xpZW50PC90ZXh0Pjx0ZXh0IHg9IjEwNS4wIiB5PSIxMTUuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzRhNTU3OCI+bG9naW4sIG1lc3NhZ2VzLCBwcm9maWxlPC90ZXh0PjxsaW5lIHgxPSIxOTAiIHkxPSIxMDAiIHgyPSIyNTAiIHkyPSIxMDAiIHN0cm9rZT0iIzZiNzc5NCIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PHJlY3QgeD0iMjUwIiB5PSI2MCIgd2lkdGg9IjIxMCIgaGVpZ2h0PSI4MCIgcng9IjEwIiBmaWxsPSIjZThmMGZmIiBzdHJva2U9IiM3YWEyZWUiLz48dGV4dCB4PSIzNTUuMCIgeT0iOTYuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+QXBpIChNaW5pbWFsIEFQSSk8L3RleHQ+PHRleHQgeD0iMzU1LjAiIHk9IjExNS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNGE1NTc4Ij5BdXRoLCBBY2NvdW50cywgTWVzc2FnZXM8L3RleHQ+PGxpbmUgeDE9IjQ2MCIgeTE9IjEwMCIgeDI9IjUxMCIgeTI9IjEwMCIgc3Ryb2tlPSIjNmI3Nzk0IiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYSkiLz48cmVjdCB4PSI1MTAiIHk9IjYwIiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNlNmY2ZWUiIHN0cm9rZT0iIzZjYzdhMCIvPjx0ZXh0IHg9IjYwNS4wIiB5PSIxMDUuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+QXBwbGljYXRpb248L3RleHQ+PHJlY3QgeD0iMjUwIiB5PSIxODAiIHdpZHRoPSIxMDAiIGhlaWdodD0iNTAiIHJ4PSIxMCIgZmlsbD0iI2U2ZjZlZSIgc3Ryb2tlPSIjNmNjN2EwIi8+PHRleHQgeD0iMzAwLjAiIHk9IjIxMC4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTgyMDNhIj5Db3JlPC90ZXh0PjxyZWN0IHg9IjM2MCIgeT0iMTgwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjUwIiByeD0iMTAiIGZpbGw9IiNlNmY2ZWUiIHN0cm9rZT0iIzZjYzdhMCIvPjx0ZXh0IHg9IjQxNS4wIiB5PSIyMTAuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+SW5mcmFzdHJ1Y3R1cmU8L3RleHQ+PHJlY3QgeD0iNDgwIiB5PSIxODAiIHdpZHRoPSIxMDAiIGhlaWdodD0iNTAiIHJ4PSIxMCIgZmlsbD0iI2U2ZjZlZSIgc3Ryb2tlPSIjNmNjN2EwIi8+PHRleHQgeD0iNTMwLjAiIHk9IjIxMC4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTgyMDNhIj5TaGFyZWQ8L3RleHQ+PGxpbmUgeDE9IjYwNSIgeTE9IjE0MCIgeDI9IjU0MCIgeTI9IjE4MCIgc3Ryb2tlPSIjNmI3Nzk0IiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYSkiLz48cmVjdCB4PSIyMCIgeT0iMTgwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjUwIiByeD0iMTAiIGZpbGw9IiNmZmYxZTAiIHN0cm9rZT0iI2U4YTg1YyIvPjx0ZXh0IHg9IjEwNS4wIiB5PSIyMTAuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+R3VhcmRzOiBhdXRoLCByb2xlPC90ZXh0Pjwvc3ZnPg==" alt="Diagram of the Sarhne structure read from its source code" style="width:100%;border-radius:10px;border:1px solid var(--line);margin-bottom:14px"><div><h3>Sarhne</h3>
+<p>Messaging web app with a .NET API and an Angular client.</p>
+<ul><li>.NET 10 solution split into Api, Application, Core, Infrastructure and Shared projects</li>
+<li>Minimal API endpoints for auth, accounts and messages, with FluentValidation and Scalar</li>
+<li>Angular 21 client with login, sign-up, messages and profile pages, route guards by role, and ngx-translate</li></ul>
+<div class="tags"><span>.NET 10</span><span>FluentValidation</span><span>Angular 21</span><span>daisyUI</span><span>ngx-translate</span></div>
+<div class="links"><a href="https://github.com/AbdulfattahHessein/sarhne-api">API repo</a><a href="https://github.com/AbdulfattahHessein/sarhne">Angular client</a></div></div></article>
 
-    <!-- Start of Header -->
-    <header>
-      <div class="container header__container">
-        <article class="header__image" data-aos="fade-up" data-aos-delay="500">
-          <img src="./assets/profile.jpg" alt="" />
-        </article>
-        <article class="header__content" data-aos="fade-in">
-          <h4>Hi, I'm <span>Abdulfattah Hessein</span> , And I'll</h4>
-          <h1>
-            Get your business <br />
-            online the right way
-          </h1>
-          <p>
-            Are you looking for a professional developer to put your business
-            online? You've come to the right place! I've helped hundreds of
-            business owners bring their ideas to life. Hire me today!
-          </p>
-          <divc class="header__ctn">
-            <a href="#contact" class="btn btn-primary">Hire me</a>
-            <a href="#projects" class="btn">Projects</a>
-          </divc>
-        </article>
-        <ul class="header__socials">
-          <li>
-            <a href="https://facebook.com/AbdulfattahHessein" target="_blank"
-              ><i class="uil uil-facebook-f"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://github.com/AbdulfattahHessein" target="_blank"
-              ><i class="uil uil-github-alt"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/AbdulfattahHessein/"
-              target="_blank"
-              ><i class="uil uil-linkedin-alt"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <!------------------- End of Header ------------------->
+<article class="card"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgMjQ1IiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjI0NSIgZm9udC1mYW1pbHk9IkludGVyLFNlZ29lIFVJLEFyaWFsLHNhbnMtc2VyaWYiPjxkZWZzPjxtYXJrZXIgaWQ9ImEiIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwTDEwIDVMMCAxMHoiIGZpbGw9IiM2Yjc3OTQiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjcyMCIgaGVpZ2h0PSIyNDUiIHJ4PSIxNCIgZmlsbD0iI2ZhZmJmZiIvPjx0ZXh0IHg9IjIwIiB5PSIzMCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzI1NTlkNiI+U2lnbmFsIGZvcm0gZXJyb3JzOiBob3cgdGhlIGhlbHBlciBmaXRzIGluPC90ZXh0PjxyZWN0IHg9IjIwIiB5PSI2MCIgd2lkdGg9IjE5MCIgaGVpZ2h0PSI3MCIgcng9IjEwIiBmaWxsPSIjZThmMGZmIiBzdHJva2U9IiM3YWEyZWUiLz48dGV4dCB4PSIxMTUuMCIgeT0iOTEuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+U2lnbmFsIGZvcm08L3RleHQ+PHRleHQgeD0iMTE1LjAiIHk9IjExMC4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNGE1NTc4Ij5mb3JtKHNpZ25hbCguLi4pLCBydWxlcyk8L3RleHQ+PGxpbmUgeDE9IjIxMCIgeTE9Ijk1IiB4Mj0iMjYwIiB5Mj0iOTUiIHN0cm9rZT0iIzZiNzc5NCIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PHJlY3QgeD0iMjYwIiB5PSI2MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI3MCIgcng9IjEwIiBmaWxsPSIjZThmMGZmIiBzdHJva2U9IiM3YWEyZWUiLz48dGV4dCB4PSIzNjAuMCIgeT0iOTEuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+VmFsaWRhdG9yIGRpcmVjdGl2ZTwvdGV4dD48dGV4dCB4PSIzNjAuMCIgeT0iMTEwLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM0YTU1NzgiPnJlYWRzIGNvbnRyb2wgZXJyb3JzPC90ZXh0PjxsaW5lIHgxPSI0NjAiIHkxPSI5NSIgeDI9IjUxMCIgeTI9Ijk1IiBzdHJva2U9IiM2Yjc3OTQiIHN0cm9rZS13aWR0aD0iMiIgbWFya2VyLWVuZD0idXJsKCNhKSIvPjxyZWN0IHg9IjUxMCIgeT0iNjAiIHdpZHRoPSIxOTAiIGhlaWdodD0iNzAiIHJ4PSIxMCIgZmlsbD0iI2U2ZjZlZSIgc3Ryb2tlPSIjNmNjN2EwIi8+PHRleHQgeD0iNjA1LjAiIHk9IjkxLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxODIwM2EiPk1lc3NhZ2UgaW4gdGVtcGxhdGU8L3RleHQ+PHRleHQgeD0iNjA1LjAiIHk9IjExMC4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNGE1NTc4Ij50cmFuc2xhdGVkLCBubyBleHRyYSBIVE1MPC90ZXh0PjxyZWN0IHg9IjI2MCIgeT0iMTcwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjU1IiByeD0iMTAiIGZpbGw9IiNmZmYxZTAiIHN0cm9rZT0iI2U4YTg1YyIvPjx0ZXh0IHg9IjM2MC4wIiB5PSIxOTMuNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+bmd4LXRyYW5zbGF0ZTwvdGV4dD48dGV4dCB4PSIzNjAuMCIgeT0iMjEyLjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM0YTU1NzgiPmVuLmpzb24gLyBhci5qc29uOiBmb3JtRXJyb3JzPC90ZXh0PjxsaW5lIHgxPSIzNjAiIHkxPSIxNzAiIHgyPSIzNjAiIHkyPSIxMzAiIHN0cm9rZT0iIzZiNzc5NCIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PC9zdmc+" alt="Diagram of how the form-errors helper fits into a Signal Form" style="width:100%;border-radius:10px;border:1px solid var(--line);margin-bottom:14px"><div><h3>Dynamic Signal Form Errors</h3>
+<p>An Angular helper that shows translated validation errors on Signal Forms, with no error markup in each template.</p>
+<ul><li>Works with Angular 21 Signal Forms</li>
+<li>Translated messages through ngx-translate</li>
+<li>Custom rules for when errors show, and where they render</li></ul>
+<div class="tags"><span>Angular 21</span><span>Signal Forms</span><span>TypeScript</span><span>ngx-translate</span></div>
+<div class="links"><a href="https://github.com/AbdulfattahHessein/dynamic-signal-form-errors">Source on GitHub</a></div></div></article>
 
-    <!-- ------------ Start of About------------- -->
-    <section class="about" id="about">
-      <div class="container about__container">
-        <div class="about__image">
-          <img src="./assets/profile2.jpg" alt="about image" />
-        </div>
-        <div class="about__details" data-aos="fade-in" data-aos-delay="300">
-          <h1>About Me</h1>
-          <div class="about__cards">
-            <div class="about__card">
-              <i class="uil uil-award-alt"></i>
-              <h4>Experience</h4>
-              <small>8+ years</small>
-            </div>
-            <div class="about__card">
-              <i class="uil uil-swatchbook"></i>
-              <h4>Projects</h4>
-              <small>220+ Completed</small>
-            </div>
-            <div class="about__card">
-              <i class="uil uil-users-alt"></i>
-              <h4>Clients</h4>
-              <small>100+ clients worldwide</small>
-            </div>
-          </div>
-          <p>
-            Building projects my clients love have always been my passion. Being
-            in the web development industry for over 3 years and serving more
-            than 70 happy clients worldwide, I'm always motivated o do more!
-          </p>
-          <p>
-            Hi, my name is John Dramani from Accra, Ghana. I'm a full-stack web
-            developer with a Bachelors degree in Computer Science. My top
-            priority is to get your business online the right way, giving you
-            industry-standard design and all the functionality you need to
-            operate smoothly online. Get in touch today with the details of your
-            project let's get started! Check out my resume below!
-          </p>
+<article class="card"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgMzEwIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjMxMCIgZm9udC1mYW1pbHk9IkludGVyLFNlZ29lIFVJLEFyaWFsLHNhbnMtc2VyaWYiPjxkZWZzPjxtYXJrZXIgaWQ9ImEiIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjciIG1hcmtlckhlaWdodD0iNyIgb3JpZW50PSJhdXRvIj48cGF0aCBkPSJNMCAwTDEwIDVMMCAxMHoiIGZpbGw9IiM2Yjc3OTQiLz48L21hcmtlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjcyMCIgaGVpZ2h0PSIzMTAiIHJ4PSIxNCIgZmlsbD0iI2ZhZmJmZiIvPjx0ZXh0IHg9IjIwIiB5PSIzMCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzI1NTlkNiI+U2tpbmV0OiBzdHJ1Y3R1cmUgcmVhZCBmcm9tIHRoZSBzb3VyY2UgY29kZTwvdGV4dD48cmVjdCB4PSIyMCIgeT0iNjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iNzAiIHJ4PSIxMCIgZmlsbD0iI2U4ZjBmZiIgc3Ryb2tlPSIjN2FhMmVlIi8+PHRleHQgeD0iOTUuMCIgeT0iOTEuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzE4MjAzYSI+QW5ndWxhciAxOCBjbGllbnQ8L3RleHQ+PHRleHQgeD0iOTUuMCIgeT0iMTEwLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM0YTU1NzgiPk1hdGVyaWFsLCBUYWlsd2luZDwvdGV4dD48cmVjdCB4PSIyMzAiIHk9IjYwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjcwIiByeD0iMTAiIGZpbGw9IiNlOGYwZmYiIHN0cm9rZT0iIzdhYTJlZSIvPjx0ZXh0IHg9IjMzMC4wIiB5PSI5MS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTgyMDNhIj5BU1AuTkVUIENvcmUgQVBJPC90ZXh0Pjx0ZXh0IHg9IjMzMC4wIiB5PSIxMTAuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzRhNTU3OCI+NSBjb250cm9sbGVyczogY2FydCwgb3JkZXJzLCBwYXltZW50cy4uLjwvdGV4dD48bGluZSB4MT0iMTcwIiB5MT0iOTUiIHgyPSIyMzAiIHkyPSI5NSIgc3Ryb2tlPSIjNmI3Nzk0IiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYSkiLz48bGluZSB4MT0iNDMwIiB5MT0iOTUiIHgyPSI0OTAiIHkyPSI5NSIgc3Ryb2tlPSIjNmI3Nzk0IiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYSkiLz48cmVjdCB4PSI0OTAiIHk9IjYwIiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjcwIiByeD0iMTAiIGZpbGw9IiNlNmY2ZWUiIHN0cm9rZT0iIzZjYzdhMCIvPjx0ZXh0IHg9IjU5NS4wIiB5PSI5MS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTgyMDNhIj5Db3JlICsgSW5mcmFzdHJ1Y3R1cmU8L3RleHQ+PHRleHQgeD0iNTk1LjAiIHk9IjExMC4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNGE1NTc4Ij5yZXBvc2l0b3JpZXMsIHVuaXQgb2Ygd29yazwvdGV4dD48cmVjdCB4PSIyMzAiIHk9IjE3MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSI2MCIgcng9IjEwIiBmaWxsPSIjZmZmMWUwIiBzdHJva2U9IiNlOGE4NWMiLz48dGV4dCB4PSIzMzAuMCIgeT0iMTk2LjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxODIwM2EiPlNpZ25hbFIgaHViPC90ZXh0Pjx0ZXh0IHg9IjMzMC4wIiB5PSIyMTUuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzRhNTU3OCI+Tm90aWZpY2F0aW9uSHViPC90ZXh0PjxsaW5lIHgxPSIzMzAiIHkxPSIxMzAiIHgyPSIzMzAiIHkyPSIxNzAiIHN0cm9rZT0iIzZiNzc5NCIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PHJlY3QgeD0iNDkwIiB5PSIxNzAiIHdpZHRoPSIxMDAiIGhlaWdodD0iNjAiIHJ4PSIxMCIgZmlsbD0iI2ZmZjFlMCIgc3Ryb2tlPSIjZThhODVjIi8+PHRleHQgeD0iNTQwLjAiIHk9IjE5Ni4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTgyMDNhIj5TUUwgU2VydmVyPC90ZXh0Pjx0ZXh0IHg9IjU0MC4wIiB5PSIyMTUuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzRhNTU3OCI+RUYgQ29yZTwvdGV4dD48cmVjdCB4PSI2MDAiIHk9IjE3MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSI2MCIgcng9IjEwIiBmaWxsPSIjZmZmMWUwIiBzdHJva2U9IiNlOGE4NWMiLz48dGV4dCB4PSI2NTAuMCIgeT0iMTk2LjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxODIwM2EiPlJlZGlzPC90ZXh0Pjx0ZXh0IHg9IjY1MC4wIiB5PSIyMTUuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzRhNTU3OCI+Y2FydDwvdGV4dD48cmVjdCB4PSIzODAiIHk9IjI0NSIgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0NSIgcng9IjEwIiBmaWxsPSIjZmZmMWUwIiBzdHJva2U9IiNlOGE4NWMiLz48dGV4dCB4PSI0NTAuMCIgeT0iMjYzLjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxODIwM2EiPlN0cmlwZTwvdGV4dD48dGV4dCB4PSI0NTAuMCIgeT0iMjgyLjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM0YTU1NzgiPlBheW1lbnRTZXJ2aWNlPC90ZXh0PjxsaW5lIHgxPSI1NjAiIHkxPSIxMzAiIHgyPSI1NDAiIHkyPSIxNzAiIHN0cm9rZT0iIzZiNzc5NCIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PGxpbmUgeDE9IjYyMCIgeTE9IjEzMCIgeDI9IjY1MCIgeTI9IjE3MCIgc3Ryb2tlPSIjNmI3Nzk0IiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1lbmQ9InVybCgjYSkiLz48L3N2Zz4=" alt="Diagram of the Skinet structure read from its source code" style="width:100%;border-radius:10px;border:1px solid var(--line);margin-bottom:14px"><div><h3>Skinet <span style="font-size:13px;color:var(--mute);font-weight:500">(course project)</span></h3>
+<p>E-commerce application with a .NET API and an Angular client, built while following a course.</p>
+<ul><li>ASP.NET Core API with accounts (Identity API endpoints), products, cart, orders and payments controllers</li>
+<li>Entity Framework Core with SQL Server, repository and unit-of-work pattern</li>
+<li>Redis-backed shopping cart, Stripe payments, SignalR for real-time updates</li>
+<li>Angular 18 client with Material and Tailwind</li></ul>
+<div class="tags"><span>.NET 10</span><span>EF Core</span><span>SQL Server</span><span>Redis</span><span>SignalR</span><span>Stripe</span><span>Angular 18</span></div>
+<div class="links"><a href="https://github.com/AbdulfattahHessein/skinet">API repo</a><a href="https://github.com/AbdulfattahHessein/ecommerce-skinet">Angular client</a></div></div></article>
+</div>
+</div></section>
 
-          <a
-            href="./assets/resume.pdf"
-            class="btn btn-primary"
-            download="resume"
-            target="_blank"
-            ><i class="uil uil-file-download-alt"></i> Download CV</a
-          >
-        </div>
-      </div>
-    </section>
-    <!-- ------------ End of About------------- -->
+<section id="skills"><div class="wrap"><h2>Skills</h2>
+<div class="skills">
+<div><h3>Back end</h3><ul><li>C#, ASP.NET Core</li><li>Entity Framework Core</li><li>SQL Server</li><li>FluentValidation, Identity</li></ul></div>
+<div><h3>Front end</h3><ul><li>Angular, TypeScript, RxJS</li><li>Signal Forms</li><li>Tailwind, Material, Bootstrap</li><li>ngx-translate (i18n)</li></ul></div>
+<div><h3>Tools</h3><ul><li>Git, GitHub</li><li>Redis, SignalR</li><li>Postman, Scalar</li><li>Stripe integration</li></ul></div>
+</div></div></section>
 
-    <!-- -------------- Start of Services ------->
+<section id="about"><div class="wrap"><h2>About</h2>
+<p style="max-width:700px;color:var(--mute)">I am a mid-level full-stack developer working mainly with .NET and Angular, and a teaching assistant at the Faculty of Computers and Information in Qena.</p>
+</div></section>
 
-    <section class="services" id="services">
-      <h1>Services</h1>
-      <p>
-        Abeatae cunn dolores molestias culpa odio illo uasi elit dipisicing*
-      </p>
-      <div class="container services__container">
-        <ul class="services__left">
-          <li class="service__item frontend active" id="frontend">
-            <span><i class="uil uil-desktop"></i></span>
-            <div>
-              <h3>Frontend</h3>
-              <p>14 Projects</p>
-            </div>
-          </li>
-          <li class="service__item backend" id="backend">
-            <span><i class="uil uil-server"></i></span>
-            <div>
-              <h3>Backend</h3>
-              <p>11 Projects</p>
-            </div>
-          </li>
-          <li class="service__item fullstack" id="fullstack">
-            <span><i class="uil uil-apps"></i></span>
-            <div>
-              <h3>Fullstack</h3>
-              <p>28 Projects</p>
-            </div>
-          </li>
-        </ul>
-        <article
-          class="services__right"
-          data-aos="fade-in"
-          data-aos-delay="200"
-        >
-          <!-- <h3>Frontend Development</h3>
-          <p>
-             Frontend ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            quaerat officia maxime ullam. Distinctio voluptate officia voluptas
-            unde debitis quia corporis doloribus labore vero? Soluta dolorum
-            sapiente dolores libero accusantium 
-          </p>
-          <p>
-            Consectetur adipisicing elit
-            Autem tempora vitae magni Sint hic non consectetur voluptatum
-            accusamus, est dicta commodi, possimus laborum nam deserunt
-            blanditiis ratione sit iste in, quisquam corporis quod voluptates
-            voluptas natus. Optio doloremque, at nisi voluptas sapiente quidem
-            expedita mollitia itaque tempora vero deleniti error, quod ipsam
-            officiis dicta facere culpa reprehenderit provident animi.
-            Architecto?
-          </p>
-          <p>Dolor sit amet consectetur adipisicing elit. ld
-            voluptatum suscipit voluptatibus ex illo porro similique, dicta
-            dignissimos facilis? 1110.</p>
-          </p> -->
-        </article>
-      </div>
-    </section>
-    <!-- -------------- End of Services ------->
-
-    <!-- -------------- Start of Projects ------->
-    <section class="projects" id="projects">
-      <h1>Recent Projects</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eum
-        sapiente at consequatur nulla.
-      </p>
-      <ul class="projects__categories">
-        <li data-filter="*">All</li>
-        <li data-filter=".frontend">Frontend</li>
-        <li data-filter=".backend">Backend</li>
-        <li data-filter=".fullstack">Fullstack</li>
-      </ul>
-
-      <div class="container projects__container" data-aos="fade-in">
-        <article class="project mix fullstack" data-order="1">
-          <div class="project__image">
-            <img src="./assets/project1.jpg" alt="Project One" />
-          </div>
-          <h3>Project One Title (Fullstack)</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
-            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
-            aperiam officia enim doloremque fugiat ab, assumenda et hic!
-            Similique, eaque?
-          </p>
-          <div class="project__cta">
-            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
-            <a href="" class="btn btn-sm" target="_blank">Github</a>
-          </div>
-        </article>
-        <article class="project mix fullstack" data-order="2">
-          <div class="project__image">
-            <img src="./assets/project2.jpg" alt="Project Two" />
-          </div>
-          <h3>Project Two Title (Fullstack)</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
-            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
-            aperiam officia enim doloremque fugiat ab, assumenda et hic!
-            Similique, eaque?
-          </p>
-          <div class="project__cta">
-            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
-            <a href="" class="btn btn-sm" target="_blank">Github</a>
-          </div>
-        </article>
-        <article class="project mix frontend" data-order="3">
-          <div class="project__image">
-            <img src="./assets/project3.jpg" alt="Project Three" />
-          </div>
-          <h3>Project Three Title (Frontend)</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
-            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
-            aperiam officia enim doloremque fugiat ab, assumenda et hic!
-            Similique, eaque?
-          </p>
-          <div class="project__cta">
-            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
-            <a href="" class="btn btn-sm" target="_blank">Github</a>
-          </div>
-        </article>
-        <article class="project mix fullstack" data-order="4">
-          <div class="project__image">
-            <img src="./assets/project4.jpg" alt="Project Four" />
-          </div>
-          <h3>Project Four Title (Fullstack)</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
-            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
-            aperiam officia enim doloremque fugiat ab, assumenda et hic!
-            Similique, eaque?
-          </p>
-          <div class="project__cta">
-            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
-            <a href="" class="btn btn-sm" target="_blank">Github</a>
-          </div>
-        </article>
-        <article class="project mix backend" data-order="5">
-          <div class="project__image">
-            <img src="./assets/project5.jpg" alt="Project Five" />
-          </div>
-          <h3>Project Five Title (Backend)</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
-            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
-            aperiam officia enim doloremque fugiat ab, assumenda et hic!
-            Similique, eaque?
-          </p>
-          <div class="project__cta">
-            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
-            <a href="" class="btn btn-sm" target="_blank">Github</a>
-          </div>
-        </article>
-        <article class="project mix backend" data-order="6">
-          <div class="project__image">
-            <img src="./assets/project6.jpg" alt="Project Six" />
-          </div>
-          <h3>Project Six Title (Backend)</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime esse
-            sint voluptatibus repellendus velit nemo eius sit voluptate magnam,
-            aperiam officia enim doloremque fugiat ab, assumenda et hic!
-            Similique, eaque?
-          </p>
-          <div class="project__cta">
-            <a href="" class="btn btn-sm btn-primary" target="_blank">Demo</a>
-            <a href="" class="btn btn-sm" target="_blank">Github</a>
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- -------------- Start of Projects ------->
-
-    <!-- -------------- Start of Swiper ------->
-
-    <section class="swiper">
-      <h1>What's my clients say</h1>
-      <p>This is my clients say about me and my work.</p>
-      <div class="swiper-wrapper">
-        <figure class="swiper-slide">
-          <figcaption>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
-            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
-            ullam ab odio maxime incidunt impedit
-          </figcaption>
-          <div class="swiper__client">
-            <div class="swiper__client-avatar">
-              <img src="./assets/avatar1.jpg" alt="Client one" />
-            </div>
-            <div class="swiper__client-details">
-              <h5>Name of clinet</h5>
-              <small>Jop</small>
-            </div>
-          </div>
-        </figure>
-        <figure class="swiper-slide">
-          <figcaption>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
-            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
-            ullam ab odio maxime incidunt impedit
-          </figcaption>
-          <div class="swiper__client">
-            <div class="swiper__client-avatar">
-              <img src="./assets/avatar2.jpg" alt="Client one" />
-            </div>
-            <div class="swiper__client-details">
-              <h5>Name of clinet</h5>
-              <small>Jop</small>
-            </div>
-          </div>
-        </figure>
-        <figure class="swiper-slide">
-          <figcaption>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
-            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
-            ullam ab odio maxime incidunt impedit
-          </figcaption>
-          <div class="swiper__client">
-            <div class="swiper__client-avatar">
-              <img src="./assets/avatar3.jpg" alt="Client one" />
-            </div>
-            <div class="swiper__client-details">
-              <h5>Name of clinet</h5>
-              <small>Jop</small>
-            </div>
-          </div>
-        </figure>
-        <figure class="swiper-slide">
-          <figcaption>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
-            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
-            ullam ab odio maxime incidunt impedit
-          </figcaption>
-          <div class="swiper__client">
-            <div class="swiper__client-avatar">
-              <img src="./assets/avatar4.jpg" alt="Client one" />
-            </div>
-            <div class="swiper__client-details">
-              <h5>Name of clinet</h5>
-              <small>Jop</small>
-            </div>
-          </div>
-        </figure>
-        <figure class="swiper-slide">
-          <figcaption>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id
-            voluptates nostrum quibusdam, possimus, ratione harum, nam molestiae
-            ullam ab odio maxime incidunt impedit
-          </figcaption>
-          <div class="swiper__client">
-            <div class="swiper__client-avatar">
-              <img src="./assets/avatar5.jpg" alt="Client one" />
-            </div>
-            <div class="swiper__client-details">
-              <h5>Name of clinet</h5>
-              <small>Jop</small>
-            </div>
-          </div>
-        </figure>
-      </div>
-
-      <div class="swiper-pagination"></div>
-    </section>
-
-    <!-- -------------- End of Swiper ------->
-
-    <!-- -------------- Start of Contact ------->
-
-    <section class="contact" id="contact">
-      <div class="container contact__container">
-        <ul class="contact__list">
-          <li data-aos="fade-in" data-aos-delay="150">
-            <a
-              href="mailto:abdulfattah.hessein@gmail.com"
-              class="contact__list-item"
-              target="_blank"
-              ><i class="uil uil-envelope"></i
-            ></a>
-          </li>
-          <li data-aos="fade-in" data-aos-delay="300">
-            <a
-              href="https://www.messenger.com/t/AbdulfattahHessein"
-              class="contact__list-item"
-              target="_blank"
-              ><i class="uil uil-facebook-messenger-alt"></i
-            ></a>
-          </li>
-          <li data-aos="fade-in" data-aos-delay="450">
-            <a
-              href="https://wa.me/+201153878729"
-              class="contact__list-item"
-              target="_blank"
-              ><i class="uil uil-whatsapp"></i
-            ></a>
-          </li>
-          <li data-aos="fade-in" data-aos-delay="600">
-            <a
-              href="tel:+201153878729"
-              class="contact__list-item"
-              target="_blank"
-              ><i class="uil uil-phone"></i
-            ></a>
-          </li>
-        </ul>
-        <form
-          action="https://formsubmit.co/abdulfattah.hessein@gmail.com"
-          method="POST"
-          class="contact__form"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <input type="text" name="Name" placeholder="Full Name" />
-          <input type="email" name="Email" placeholder="Email Address" />
-          <textarea rows="7" name="Message" placeholder="Message"></textarea>
-          <button type="submit" class="btn">Send</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container footer__container">
-        <ul class="footer__menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="footer__socials">
-          <li>
-            <a href="https://facebook.com/AbdulfattahHessein" target="_blank"
-              ><i class="uil uil-facebook-f"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://github.com/AbdulfattahHessein" target="_blank"
-              ><i class="uil uil-github-alt"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/AbdulfattahHessein/"
-              target="_blank"
-              ><i class="uil uil-linkedin-alt"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__copyright">
-        <small>2024 &copy; All Rights Reserved.</small>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./mix/dist/mixitup.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1500, offset: 80 });
-    </script>
-    <script src="./data.js"></script>
-    <script src="./main.js"></script>
-  </body>
-</html>
+<section id="contact"><div class="wrap"><h2>Contact</h2>
+<div class="links" style="margin-top:0">
+<a href="mailto:abdulfattah.hessein@gmail.com">abdulfattah.hessein@gmail.com</a>
+<a href="https://github.com/AbdulfattahHessein">GitHub</a>
+<a href="https://linkedin.com/in/abdulfattahhessein">LinkedIn</a>
+<a href="https://codeforces.com/profile/servo">Codeforces</a></div></div></section>
+</main>
+<footer><div class="wrap">© Abdulfattah Hessein</div></footer>
+</body></html>
